@@ -7,7 +7,7 @@ class CategoriesController extends Controller {
     const { ctx } = this;
 
     const result = await ctx.service.categories.index();
-    ctx.body = result
+    ctx.body = result.data
   }
 }
 

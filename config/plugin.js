@@ -6,6 +6,18 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-
+  // security: {
+  //   xframe: {
+  //     enable: false,
+  //   },
+  //   csrf: {
+  //     enable: false
+  //   },
+    
+  // },
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  }
   
 };

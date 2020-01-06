@@ -19,9 +19,12 @@ module.exports = appInfo => {
         enable: false,
       },
       csrf: {
-        enable: false
-      }
-    }
+        enable: false,
+        ignoreJSON: true
+      },
+      domainWhiteList: ['*']
+    },
+
   };
 
   // use for cookie sign key, should change to your own and keep security
@@ -29,6 +32,11 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+
+  config.cors = {
+    origin:'*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
 
   // add your user config here
   const userConfig = {
